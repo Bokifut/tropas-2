@@ -142,20 +142,18 @@ public class ListaSimple<T> {
        }
     }
     public void buscarEnLista(T dato) {
-
         Nodo<T> actual = cabeza;
         while (actual != null) {
-            if (actual == dato){
+            if (actual.getDato() == dato){
                 System.out.println("True");
-                break;
+                return;
             }
-            else{
-                actual = actual.getSiguiente();
-
-            }
+            actual = actual.getSiguiente();
+        }
+        System.out.println("False");
         }
     }
-}
+
 
 
 
